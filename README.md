@@ -47,13 +47,6 @@ A ZIP version is also available on the Releases page for portable or manual use.
 
 ---
 
-## Screenshot
-
-<p align="center">
-  <img src="screenshot.png" width="800" alt="RestorePointGUI Screenshot">
-</p>
-
----
 
 ## Features
 
