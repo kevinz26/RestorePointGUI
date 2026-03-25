@@ -1,4 +1,4 @@
-<h1 align="center">RestorePointGUI</h1>
+<h1 align="center" style="font-size: 60px;">RestorePointGUI</h1>
 
 <p align="center">
   A fast, lightweight Windows restore point manager built with WPF.
