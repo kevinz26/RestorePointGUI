@@ -54,6 +54,8 @@ Download the ZIP from Releases and run manually.
 Have questions, ideas, or feedback?
 
 👉 https://github.com/kevinz26/RestorePointGUI/discussions
+👉 [Feature Request](https://github.com/kevinz26/RestorePointGUI/issues)
+👉 [Bug Report](https://github.com/kevinz26/RestorePointGUI/issues)
 
 ---
 
