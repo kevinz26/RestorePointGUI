@@ -24,7 +24,7 @@
 ## 🚀 Install
 
 ### Recommended (Installer)
-👉 [Releases/Latest](https://github.com/kevinz26/RestorePointGUI/releases/latest)
+👉 [Releases---Latest](https://github.com/kevinz26/RestorePointGUI/releases/latest)
 
 ### Portable
 Download the ZIP from Releases and run manually.
