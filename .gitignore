@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+*.log
+*.exe
+*.dll
+*.zip
+publish/
+installer-output/

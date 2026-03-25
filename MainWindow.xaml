@@ -1,0 +1,168 @@
+<Window x:Class="RestorePoint.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RestorePoint" Height="520" Width="600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Background="#0D0D0D"
+        Foreground="#00E63C">
+
+    <Window.Resources>
+        <!-- Button Style -->
+        <Style x:Key="GreenButton" TargetType="Button">
+            <Setter Property="Background" Value="#0D0D0D"/>
+            <Setter Property="Foreground" Value="#00E63C"/>
+            <Setter Property="BorderBrush" Value="#00E63C"/>
+            <Setter Property="BorderThickness" Value="1.5"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#0A2A0A"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#00FF50"/>
+                                <Setter Property="Foreground" Value="#00FF50"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#143D14"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#2A2A2A"/>
+                                <Setter Property="Foreground" Value="#2A2A2A"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Danger Button Style -->
+        <Style x:Key="RedButton" TargetType="Button" BasedOn="{StaticResource GreenButton}">
+            <Setter Property="BorderBrush" Value="#E63C00"/>
+            <Setter Property="Foreground" Value="#E63C00"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#2A0A0A"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF5000"/>
+                                <Setter Property="Foreground" Value="#FF5000"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#3D1414"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- ListBox Style -->
+        <Style x:Key="DarkListBox" TargetType="ListBox">
+            <Setter Property="Background" Value="#111111"/>
+            <Setter Property="BorderBrush" Value="#00E63C"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#00E63C"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Padding" Value="4"/>
+        </Style>
+
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Padding" Value="8,6"/>
+            <Setter Property="Foreground" Value="#00E63C"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#0A2A0A"/>
+                    <Setter Property="Foreground" Value="#00FF50"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#0D1F0D"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Restore Point" FontFamily="Consolas" FontSize="26" FontWeight="Bold"
+                       Foreground="#00E63C" HorizontalAlignment="Center"/>
+            <TextBlock Text="Version 1.0.0" FontFamily="Consolas" FontSize="11"
+                       Foreground="#005A1A" HorizontalAlignment="Center" Margin="0,2,0,0"/>
+            <Rectangle Height="1" Fill="#00E63C" Margin="0,12,0,0" Opacity="0.4"/>
+        </StackPanel>
+
+        <!-- Status Bar -->
+        <Border Grid.Row="1" Background="#111111" BorderBrush="#00E63C" BorderThickness="1"
+                CornerRadius="4" Padding="12,8" Margin="0,0,0,16">
+            <TextBlock x:Name="StatusText" Text="Ready" FontFamily="Consolas" FontSize="13"
+                       Foreground="#00E63C"/>
+        </Border>
+
+        <!-- Restore Points List -->
+        <Grid Grid.Row="2" Margin="0,0,0,16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="RESTORE POINTS" FontFamily="Consolas" FontSize="11"
+                       Foreground="#005A1A" Margin="0,0,0,6"/>
+            <ListBox Grid.Row="1" x:Name="RestorePointsList" Style="{StaticResource DarkListBox}"
+                     ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        </Grid>
+
+        <!-- Action Buttons -->
+        <Grid Grid.Row="3" Margin="0,0,0,12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="12"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="＋  Create Restore Point"
+                    Style="{StaticResource GreenButton}" Click="CreateClick"/>
+            <Button Grid.Column="2" Content="✕  Delete Selected"
+                    Style="{StaticResource RedButton}" Click="DeleteClick"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="12"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="↺  Refresh List"
+                    Style="{StaticResource GreenButton}" Click="RefreshClick"/>
+            <Button Grid.Column="2" Content="⚠  Delete All"
+                    Style="{StaticResource RedButton}" Click="DeleteAllClick"/>
+        </Grid>
+    </Grid>
+</Window>

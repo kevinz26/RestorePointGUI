@@ -1,0 +1,3 @@
+Recommended build command on Windows:
+  dotnet build RestorePoint.sln -c Release
+
