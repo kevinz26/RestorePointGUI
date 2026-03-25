@@ -1,74 +1,68 @@
-# RestorePointGUI
+<p align="center">
+  <img src="screenshot.png" width="120" />
+</p>
+
+<h1 align="center">RestorePointGUI</h1>
+
+<p align="center">
+  A fast, lightweight Windows restore point manager built with WPF.
+</p>
 
 <p align="center">
   <a href="https://github.com/kevinz26/RestorePointGUI/releases/latest">
-    <img src="https://img.shields.io/badge/Download-Installer-brightgreen?style=for-the-badge" alt="Download Installer">
+    <img src="https://img.shields.io/badge/Download-Installer-brightgreen?style=for-the-badge" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/kevinz26/RestorePointGUI?style=flat-square" alt="Latest Release">
-  <img src="https://img.shields.io/github/downloads/kevinz26/RestorePointGUI/total?style=flat-square" alt="Downloads">
-  <img src="https://img.shields.io/github/license/kevinz26/RestorePointGUI?style=flat-square" alt="License">
-  <img src="https://img.shields.io/github/repo-size/kevinz26/RestorePointGUI?style=flat-square" alt="Repo Size">
-  <img src="https://img.shields.io/github/last-commit/kevinz26/RestorePointGUI?style=flat-square" alt="Last Commit">
-  <img src="https://img.shields.io/badge/platform-Windows%20x64-blue?style=flat-square" alt="Platform">
-  <img src="https://img.shields.io/badge/.NET-8-purple?style=flat-square" alt=".NET 8">
-  <img src="https://img.shields.io/badge/WPF-Desktop-blueviolet?style=flat-square" alt="WPF Desktop">
-</p>
-
-<p align="center">
-  A fast, lightweight WPF utility for creating and managing Windows system restore points.
+  <img src="https://img.shields.io/github/v/release/kevinz26/RestorePointGUI?style=flat-square" />
+  <img src="https://img.shields.io/github/downloads/kevinz26/RestorePointGUI/total?style=flat-square" />
+  <img src="https://img.shields.io/github/license/kevinz26/RestorePointGUI?style=flat-square" />
+  <img src="https://img.shields.io/github/last-commit/kevinz26/RestorePointGUI?style=flat-square" />
+  <img src="https://img.shields.io/badge/platform-Windows%20x64-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/.NET-8-purple?style=flat-square" />
 </p>
 
 ---
 
-## Install
+## 🚀 Install
 
-### Recommended
-Download the latest installer from the Releases page:
-
-<p>
-  <a href="https://github.com/kevinz26/RestorePointGUI/releases/latest">
-    <img src="https://img.shields.io/badge/Download-Latest%20Release-brightgreen?style=for-the-badge" alt="Download Latest Release">
-  </a>
-</p>
+### Recommended (Installer)
+👉 https://github.com/kevinz26/RestorePointGUI/releases/latest
 
 ### Portable
-A ZIP version is also available on the Releases page for portable or manual use.
+Download the ZIP from Releases and run manually.
 
 ---
 
-## Demo
+## 🎬 Demo
 
 <p align="center">
-  <img src="demo.gif" width="800" alt="RestorePointGUI Demo">
+  <img src="demo.gif" width="800" />
 </p>
 
 ---
 
-
-## Features
+## ✨ Features
 
 - Create Windows system restore points
-- Simple and clean WPF interface
+- Clean and simple WPF interface
 - Lightweight and fast
-- Installer and portable ZIP releases
-- Windows x64 support
-- .NET 8 based desktop app
+- Installer + portable builds
+- Native Windows integration
 
 ---
 
-## Requirements
+## 💬 Community
 
-- Windows 10 or newer
-- Administrator privileges for restore point operations
-- x64 system
+Have questions, ideas, or feedback?
+
+👉 https://github.com/kevinz26/RestorePointGUI/discussions
 
 ---
 
-## Build from source
+## 🛠 Build from Source
 
 ```powershell
-dotnet restore RestorePoint.sln
-dotnet build RestorePoint.sln -c Release
+dotnet restore
+dotnet build -c Release
