@@ -1,13 +1,23 @@
+# Build output
 bin/
 obj/
+publish/
+installer-output/
+
+# Visual Studio
 .vs/
 *.user
 *.suo
-*.cache
-*.pdb
+
+# Logs
 *.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Binaries
 *.exe
 *.dll
+*.pdb
 *.zip
-publish/
-installer-output/
