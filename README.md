@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 160d64b (Add MIT license)
 # RestorePointGUI
 
 <p align="center">
