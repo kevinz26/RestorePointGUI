@@ -34,7 +34,7 @@ Download the ZIP from Releases and run manually.
 ## 🎬 Demo
 
 <p align="center">
-  <img src="demo.gif" width="600" />
+  <img src="demo.gif" width="700" />
 </p>
 
 ---
