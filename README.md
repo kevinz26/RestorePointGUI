@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="screenshot.png" width="200" />
-</p>
-
 <h1 align="center">RestorePointGUI</h1>
 
 <p align="center">
