@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="screenshot.png" width="120" />
+  <img src="screenshot.png" width="200" />
 </p>
 
 <h1 align="center">RestorePointGUI</h1>
@@ -38,7 +38,7 @@ Download the ZIP from Releases and run manually.
 ## 🎬 Demo
 
 <p align="center">
-  <img src="demo.gif" width="800" />
+  <img src="demo.gif" width="600" />
 </p>
 
 ---
